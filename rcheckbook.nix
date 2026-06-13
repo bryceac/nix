@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 	src = fetchFromGitHub {
 		owner = "bryceac";
 		repo = "rcheckbook";
-		rev = "v0.6.5";
+		rev = "v${finalAttrs.version}";
 		sha256 = "1ls32yacw9r7bl1sd00wagd0pg4viq9klmq3iyn0d2mnmgavc81s";
 	};
 
