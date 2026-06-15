@@ -20,6 +20,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
 	postInstall = ''
 		install -Dm644 -t $out/schema $src/register.sql
+		wrapProgram "$out/bin/rcheckbook" --set REGISTRY_SCHEMA_DIR $out/schema
 	'';
 
 	cargoHash = "sha256-ecmbjjgMIsVfWkQduotARDqJdXTdvPc2brophV5aCzw=";
