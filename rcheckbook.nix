@@ -5,6 +5,7 @@
 	rustPlatform,
 	llvmPackages,
 	stdenv,
+	wrapProgram,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
