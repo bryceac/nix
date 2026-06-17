@@ -28,7 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
 	LIBCLANG_PATH = "${llvmPackages.libclang.lib}/lib";
 
-	nativeBuildInputs = [ rustPlatform.bindgenHook ];
+	nativeBuildInputs = [ rustPlatform.bindgenHook, makeWrapper ];
 
 	meta = {
 		description = "Simple CLI-based Checkbook ledger.";
