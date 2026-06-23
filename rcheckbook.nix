@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 		owner = "bryceac";
 		repo = "rcheckbook";
 		rev = "v${finalAttrs.version}";
-		sha256 = "1qyqwhhyykv917zvi2whp1y69lvlxj6mmn96fjac5g64aifds8rn";
+		hash = "sha256-FtNVKrxgJM3j0UmbVc0th8A6xwKQMQSghryHgoEzPEk=";
 	};
 
 	postInstall = ''
@@ -24,7 +24,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 		wrapProgram $out/bin/rcheckbook --set REGISTRY_SCHEMA_DIR $out/schema
 	'';
 
-	cargoHash = "sha256-FtNVKrxgJM3j0UmbVc0th8A6xwKQMQSghryHgoEzPEk=";
+	cargoHash = "sha256-sFkmp8ronC2LIxtL98hZ6PPwDei0Q3grIo3w82B5vKA=";
 
 	LIBCLANG_PATH = "${llvmPackages.libclang.lib}/lib";
 
